@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Portafolio Completo</title>
+
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      font-family: Arial, sans-serif;
+      color: white;
+
+      /* 🔥 Fondo con 4.jpg */
+      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+                  url("4.jpg") center/cover no-repeat;
+
+      /* 🔥 Centrado total */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+    }
+
+    /* Galería */
+    .galeria {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    /* Imágenes */
+    .galeria img {
+      width: 250px;
+      border-radius: 20px; /* puntas redondas */
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    /* Efecto hover */
+    .galeria img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px rgba(0,255,150,0.7);
+    }
+  </style> 
+  
+  <style>
+/* tu código anterior */
+
+/* 🔥 ANIMACIONES */
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: scale(0.8) translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+body {
+    
+  animation: aparecer 1.5s ease-out;
+}
+
+@keyframes flotar {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+.galeria img {
+  animation: flotar 3s ease-in-out infinite;
+}
+
+@keyframes glitch {
+  0% { text-shadow: 2px 2px red; }
+  25% { text-shadow: -2px -2px blue; }
+  50% { text-shadow: 2px -2px lime; }
+  75% { text-shadow: -2px 2px magenta; }
+  100% { text-shadow: 2px 2px red; }
+}
+.menu a {
+  color: white; /* 🔥 letras en blanco */
+  text-decoration: none;
+  font-size: 18px;
+}
+h1 {
+  animation: glitch 0.5s infinite;
+}
+.imagen {
+  width: 300px;         /* tamaño */
+  border-radius: 15px;  /* bordes redondeados */
+  display: block;
+  margin: 20px auto;    /* centrado */
+}/* 🔥 Pantalla de carga */
+#loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 9999;
+}
+
+/* Texto */
+#loader h1 {
+  color: #00ffcc;
+  margin-bottom: 20px;
+  text-shadow: 0 0 10px #00ffcc;
+}
+
+/* Barra */
+.barra {
+  width: 200px;
+  height: 10px;
+  background: #222;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* Progreso animado */
+.progreso {
+  width: 0%;
+  height: 100%;
+  background: #00ffcc;
+  animation: cargar 3s linear forwards;
+}
+
+/* Animación */
+@keyframes cargar {
+  from { width: 0%; }
+  to { width: 100%; }
+}</style>  
+  
+
+</head>
+<script>
+  window.addEventListener("load", () => {
+    setTimeout(() => {
+      document.getElementById("loader").style.display = "none";
+    }, 3000); // dura 3 segundos
+  });
+</script><body> <div id="loader">
+  <h1>AQUÍ ENCONTRARÁS LOS MEJORES JUEGOS CLÁSICOS 🎮🕹️🎯</h1>
+  <div class="barra">
+    <div class="progreso"></div>
+  </div>
+</div>
+    <nav class="menu">
+  <ul>
+    <li><a href="#">Inicio</a></li>
+    <li><a href="#">Portafolio</a></li>
+    <li><a href="#">Proyectos</a></li>
+    <li><a href="#">Contacto</a></li>
+  </ul>
+</nav>
+
+  <h1>Mi Portafolio</h1>
+
+  <div class="galeria">
+    <img src="1.jpg" alt="Imagen 1">
+    <img src="2.jpg" alt="Imagen 2">
+  </div>
+
+</body> <img src="5.png" class="logo" alt="Imagen esquina">
+<div id="particles"></div>
+</html> 
+<img src="3.jpeg" alt="Control gamer" class="imagen">
